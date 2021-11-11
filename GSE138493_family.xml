@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<MINiML
+   xmlns="http://www.ncbi.nlm.nih.gov/geo/info/MINiML"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://www.ncbi.nlm.nih.gov/geo/info/MINiML http://www.ncbi.nlm.nih.gov/geo/info/MINiML.xsd"
+   version="0.5.0" >
+
+  <Contributor iid="contrib1">
+    <Person><First>Noemie</First><Last>Hamilton</Last></Person>
+    <Email>n.m.hamilton@sheffield.ac.uk</Email>
+    <Laboratory>The Bateson Centre</Laboratory>
+    <Department>Department of Infection, Immunity and Cardiovascular Disease</Department>
+    <Organization>University of Sheffield</Organization>
+    <Address>
+      <Line>Western Bank</Line>
+      <City>Sheffield</City>
+      <State>Great Britain</State>
+      <Postal-Code>S10 2TN</Postal-Code>
+      <Country>United Kingdom</Country>
+    </Address>
+  </Contributor>
+
+  <Contributor iid="contrib2">
+    <Organization>Agilent Technologies</Organization>
+    <Email>cag_sales-na@agilent.com</Email>
+    <Phone>877-424-4536</Phone>
+    <Organization>Agilent Technologies</Organization>
+    <Address>
+      <City>Palo Alto</City>
+      <State>CA</State>
+      <Zip-Code>94304</Zip-Code>
+      <Country>USA</Country>
+    </Address>
+    <Web-Link>www.agilent.com</Web-Link>
+  </Contributor>
+
+  <Contributor iid="contrib3">
+    <Person><First>Noémie</First><Last>Hamilton</Last></Person>
+  </Contributor>
+
+  <Contributor iid="contrib4">
+    <Person><First>Jutta</First><Last>Gaertner</Last></Person>
+  </Contributor>
+
+  <Database iid="GEO">
+    <Name>Gene Expression Omnibus (GEO)</Name>
+    <Public-ID>GEO</Public-ID>
+    <Organization>NCBI NLM NIH</Organization>
+    <Web-Link>http://www.ncbi.nlm.nih.gov/geo</Web-Link>
+    <Email>geo@ncbi.nlm.nih.gov</Email>
+  </Database>
+
+  <Platform iid="GPL14664">
+    <Status database="GEO">
+      <Submission-Date>2011-10-04</Submission-Date>
+      <Release-Date>2011-10-04</Release-Date>
+      <Last-Update-Date>2015-12-17</Last-Update-Date>
+    </Status>
+    <Title>Agilent-026437 D. rerio (Zebrafish) Oligo Microarray V3 (Probe Name version)</Title>
+    <Accession database="GEO">GPL14664</Accession>
+    <Technology>in situ oligonucleotide</Technology>
+    <Distribution>commercial</Distribution>
+    <Organism taxid="7955">Danio rerio</Organism>
+    <Manufacturer>Agilent Technologies</Manufacturer>
+    <Manufacture-Protocol>
+see manufacturer's web site at http://www.agilent.com/
+    </Manufacture-Protocol>
+    <Description>
+D. rerio (Zebrafish) Oligo Microarray V3
+
+Arrays of this design have barcodes that begin with 16026437 or 2526437.
+
+DesignID : 026437
+The ID column includes the Agilent Probe Names.
+
+*** The ID column includes the Agilent Probe Names. A different version of this platform with the Agilent Feature Extraction feature numbers in the ID column is assigned accession number GPL14688.
+    </Description>
+    <Contact-Ref ref="contrib2" />
+    <Relation type="Alternative to" target="GPL14688" comment="Feature Number version" />
+    <Data-Table>
+      <Column position="1">
+        <Name>ID</Name>
+        <Description>Agilent probe name</Description>
+      </Column>
+      <Column position="2">
+        <Name>CONTROL_TYPE</Name>
+        <Description>Control type</Description>
+      </Column>
+      <Column position="3">
+        <Name>REFSEQ</Name>
+        <Description>RefSeqAccession</Description>
+      </Column>
+      <Column position="4">
+        <Name>GB_ACC</Name>
+        <Description>GenBank Accession number </Description>
+        <Link-Prefix>http://www.ncbi.nlm.nih.gov/nuccore/?term=</Link-Prefix>
+      </Column>
+      <Column position="5">
+        <Name>LOCUSLINK_ID</Name>
+        <Description>LocuslinkID</Description>
+      </Column>
+      <Column position="6">
+        <Name>GENE_SYMBOL</Name>
+        <Description>Gene Symbol</Description>
+      </Column>
+      <Column position="7">
+        <Name>GENE_NAME</Name>
+        <Description>Gene Name</Description>
+      </Column>
+      <Column position="8">
+        <Name>UNIGENE_ID</Name>
+        <Description>UnigeneID</Description>
+      </Column>
+      <Column position="9">
+        <Name>ENSEMBL_ID</Name>
+        <Description>EnsemblID</Description>
+      </Column>
+      <Column position="10">
+        <Name>ACCESSION_STRING</Name>
+        <Description>Accession String</Description>
+      </Column>
+      <Column position="11">
+        <Name>CHROMOSOMAL_LOCATION</Name>
+        <Description>Chromosomal Location</Description>
+      </Column>
+      <Column position="12">
+        <Name>DESCRIPTION</Name>
+        <Description>Description</Description>
+      </Column>
+      <Column position="13">
+        <Name>GO_ID</Name>
+        <Description>GoIDs</Description>
+      </Column>
+      <Column position="14">
+        <Name>SEQUENCE</Name>
+        <Description>Sequence</Description>
+      </Column>
+      <Column position="15">
+        <Name>SPOT_ID</Name>
+      </Column>
+    <External-Data rows="43663">
+GPL14664-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Platform>
+
+  <Sample iid="GSM4109710">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_adult_1</Title>
+    <Accession database="GEO">GSM4109710</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant adult brain 1year old</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+adult
+      </Characteristics>
+      <Characteristics tag="tissu">
+Brain
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109710-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109711">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_adult_2</Title>
+    <Accession database="GEO">GSM4109711</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant adult brain 1year old</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+adult
+      </Characteristics>
+      <Characteristics tag="tissu">
+Brain
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109711-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109712">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_adult_3</Title>
+    <Accession database="GEO">GSM4109712</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant adult brain 1year old</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+adult
+      </Characteristics>
+      <Characteristics tag="tissu">
+Brain
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109712-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109713">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_dpf_1</Title>
+    <Accession database="GEO">GSM4109713</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant whole embryos at 3dpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+3 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109713-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109714">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_dpf_2</Title>
+    <Accession database="GEO">GSM4109714</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant whole embryos at 3dpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+3 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109714-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109715">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_dpf_3</Title>
+    <Accession database="GEO">GSM4109715</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant whole embryos at 3dpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+3 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109715-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109716">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_hpf_1</Title>
+    <Accession database="GEO">GSM4109716</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant whole embryos at 28hpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+28 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109716-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109717">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_hpf_1.1</Title>
+    <Accession database="GEO">GSM4109717</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant whole embryos at 28hpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+28 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109717-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109718">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_hpf_2</Title>
+    <Accession database="GEO">GSM4109718</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant whole embryos at 28hpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+28 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109718-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109719">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>M_hpf_3</Title>
+    <Accession database="GEO">GSM4109719</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>rnaset2 zebrafish  mutant whole embryos at 28hpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+rnaset2 mutant
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+28 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109719-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109720">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_adult_1</Title>
+    <Accession database="GEO">GSM4109720</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish adult brain 1year old</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+adult
+      </Characteristics>
+      <Characteristics tag="tissu">
+Brain
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109720-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109721">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_adult_2</Title>
+    <Accession database="GEO">GSM4109721</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish adult brain 1year old</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+adult
+      </Characteristics>
+      <Characteristics tag="tissu">
+Brain
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109721-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109722">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_adult_3</Title>
+    <Accession database="GEO">GSM4109722</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish adult brain 1year old</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+adult
+      </Characteristics>
+      <Characteristics tag="tissu">
+Brain
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109722-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109723">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_dpf_1</Title>
+    <Accession database="GEO">GSM4109723</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish whole embryos at 3dpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+3 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109723-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109724">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_dpf_2</Title>
+    <Accession database="GEO">GSM4109724</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish whole embryos at 3dpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+3 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109724-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109725">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_dpf_3</Title>
+    <Accession database="GEO">GSM4109725</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish whole embryos at 3dpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+3 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109725-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109726">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_hpf_1</Title>
+    <Accession database="GEO">GSM4109726</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish whole embryos at 28hpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+28 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109726-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109727">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_hpf_1.1</Title>
+    <Accession database="GEO">GSM4109727</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish whole embryos at 28hpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+28 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109727-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109728">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_hpf_2</Title>
+    <Accession database="GEO">GSM4109728</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish whole embryos at 28hpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+28 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109728-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Sample iid="GSM4109729">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2019-10-08</Last-Update-Date>
+    </Status>
+    <Title>WT_hpf_3</Title>
+    <Accession database="GEO">GSM4109729</Accession>
+    <Type>RNA</Type>
+    <Channel-Count>1</Channel-Count>
+    <Channel position="1">
+      <Source>WT sibling zebrafish whole embryos at 28hpf</Source>
+      <Organism taxid="7955">Danio rerio</Organism>
+      <Characteristics tag="genotype/variation">
+wild type
+      </Characteristics>
+      <Characteristics tag="developmental stage">
+28 dpf
+      </Characteristics>
+      <Characteristics tag="tissu">
+whole embryo
+      </Characteristics>
+      <Growth-Protocol>
+All zebrafish were maintained following standard protocols (Nüsslein-Volhard and Dham, 2002). Tanks were maintained at 28°C with a continuous re-circulating water supply and a daily light/dark cycle of 14/10 hours.
+      </Growth-Protocol>
+      <Molecule>polyA RNA</Molecule>
+      <Extract-Protocol>
+RNA was isolated from pooled dechorionated embryos at 28 hour post fertilisation (hpf), 3 day post fertilisation (hpf) and dissected whole adult brains using TRIzol (Invitrogen), following the manufacturer’s protocol. The integrity of the RNA was confirmed using the Agilent 2100 BioAnalyzer, using only samples with an RNA integrity number of at least 8.
+      </Extract-Protocol>
+      <Label>Cy3</Label>
+      <Label-Protocol>
+Agilent Low Input Quick Amp Labeling Kit generates fluorescent cRNA (complimentary RNA) with a sample input RNA range between 25 ng and 200 ng of total RNA or a minimum of 5 ng of poly A+ RNA for one- color processing. The method uses T7 RNA polymerase, which simultaneously amplifies target material and incorporates cyanine 3- labeled CTP. Amplification is typically at least a 100- fold from total RNA to cRNA with the use of this kit.
+      </Label-Protocol>
+    </Channel>
+    <Hybridization-Protocol>
+.Incubate at 60C for exactly 30 min to fragment the RNA.  .Add Buffer to stop the fragmentation reaction:  2x Hybridization Buffer to the 1x22K and 1x44K array formats  2x GEx Hybridization Buffer HI-RPM to the 1x244K, 2x105K, 4x44K and 8x15K array  formats. Hybridize the arrays in an ozone free room (room 0.224).
+    </Hybridization-Protocol>
+    <Scan-Protocol>
+Genome-wide expression profiling was performed using the Zebrafish (v3) Gene Expression 4x44K Microarray (Agilent G2519F) containing 43803 probes according to the manufacturer’s instructions.
+    </Scan-Protocol>
+    <Data-Processing>
+The probe sequences for this array platform were re-annotated using the ReAnnotator pipeline (Arloth et al., 2015) against reference genome danRer11 in order to obtain updated gene symbols.  Scanned raw data were normalised using quantile normalisation, and then filtered using the ReAnnotator results so that only probes matching the exons of their target gene were retained. In the case of genes with more than 1 probe, the probe with the highest inter-quartile range was chosen as the representative probe for the gene.
+    </Data-Processing>
+    <Platform-Ref ref="GPL14664" />
+    <Contact-Ref ref="contrib1" />
+    <Supplementary-Data type="unknown">
+NONE
+    </Supplementary-Data>
+    <Data-Table>
+      <Column position="1">
+        <Name>ID_REF</Name>
+      </Column>
+      <Column position="2">
+        <Name>VALUE</Name>
+        <Description>quantile normalized</Description>
+      </Column>
+    <External-Data rows="43603">
+GSM4109729-tbl-1.txt
+    </External-Data>
+    </Data-Table>
+  </Sample>
+
+  <Series iid="GSE138493">
+    <Status database="GEO">
+      <Submission-Date>2019-10-07</Submission-Date>
+      <Release-Date>2019-10-08</Release-Date>
+      <Last-Update-Date>2021-07-07</Last-Update-Date>
+    </Status>
+    <Title>Microarray expression profiling in zebrafish rnaset2 mutant</Title>
+    <Accession database="GEO">GSE138493</Accession>
+    <Pubmed-ID>32212285</Pubmed-ID>
+    <Summary>
+RNASET2-deficient leukoencephalophathy is a severe leukodystrophy affecting children with psychomotor impairements in their forst year of life. We generated the first zebrafish model for a human leukodystrophy by targetting the ortholog rnaset2 gene using mutagenesis. This zebrafish mutant recapitulated the human clinical manisfestations and developed white matter defects detectable by MRI. Additionally, this zebrafish mutant identified this disease as a lysosomal storage disorders, with RNA accumulating in neurons. To understand how accumulation of RNA in neurons trigger white matter lesions, we undertook an unbiased approach and perfored microarray analysis. We identified differentially expressed genes in mutants and the immune system as a key pathway disregulated in the zebrafish rnaset2 mutant.
+    </Summary>
+    <Overall-Design>
+Gene expression profiles of rnaset2 zebrafish compared to WT sibling of whole embryos at 28hour post fertilisation, 3days post fertilisation and brain of 1 year old adults
+
+***Please note that the original/unedited raw data files are unavailable and thus, not provided.
+    </Overall-Design>
+    <Type>Expression profiling by array</Type>
+    <Contributor-Ref ref="contrib3" position="1" />
+    <Contributor-Ref ref="contrib4" position="2" />
+    <Contact-Ref ref="contrib1" />
+    <Sample-Ref ref="GSM4109710" />
+    <Sample-Ref ref="GSM4109711" />
+    <Sample-Ref ref="GSM4109712" />
+    <Sample-Ref ref="GSM4109713" />
+    <Sample-Ref ref="GSM4109714" />
+    <Sample-Ref ref="GSM4109715" />
+    <Sample-Ref ref="GSM4109716" />
+    <Sample-Ref ref="GSM4109717" />
+    <Sample-Ref ref="GSM4109718" />
+    <Sample-Ref ref="GSM4109719" />
+    <Sample-Ref ref="GSM4109720" />
+    <Sample-Ref ref="GSM4109721" />
+    <Sample-Ref ref="GSM4109722" />
+    <Sample-Ref ref="GSM4109723" />
+    <Sample-Ref ref="GSM4109724" />
+    <Sample-Ref ref="GSM4109725" />
+    <Sample-Ref ref="GSM4109726" />
+    <Sample-Ref ref="GSM4109727" />
+    <Sample-Ref ref="GSM4109728" />
+    <Sample-Ref ref="GSM4109729" />
+    <Supplementary-Data type="TXT">
+ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE138nnn/GSE138493/suppl/GSE138493_processed_data_file.txt.gz
+    </Supplementary-Data>
+    <Relation type="BioProject" target="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA576178" />
+  </Series>
+
+</MINiML>

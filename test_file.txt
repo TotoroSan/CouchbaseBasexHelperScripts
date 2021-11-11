@@ -1,0 +1,8 @@
+"embryo_age" "dechorinated" "exposure_start" "exposure_duration" "concentration" "compound" "tissue" 
+"GSM908630" "8 hpf" "8 hpf" "wild type      " "20 ug/L" "pentachlorophenol"
+"GSM908631" "8 hpf" "8 hpf" "wild type      " "20 ug/L" "pentachlorophenol"
+"GSM908632" "8 hpf" "8 hpf" "wild type      " "20 ug/L" "pentachlorophenol"
+"GSM908633" "8 hpf" "8 hpf" "wild type      " "50 ug/L" "pentachlorophenol"
+"GSM908634" "8 hpf" "8 hpf" "wild type      " "50 ug/L" "pentachlorophenol"
+"GSM908635" "8 hpf" "8 hpf" "wild type      " "50 ug/L" "pentachlorophenol"
+"GSM908636" "8 hpf" "8 hpf" "wild type      " "deionized"
