@@ -87,12 +87,12 @@ class CouchbaseConnection(object):
 
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[id]))
-            #for row in row_iter:
+            for row in row_iter:
                 #print(row)
-                #sample_id_list.append([row["iid"]])
+                sample_id_list.append([row["iid"]])
 
             #print(sample_id_list)
-            #return sample_id_list
+            return sample_id_list
         except Exception as e:
             print(e)
 
@@ -308,6 +308,104 @@ class CouchbaseConnection(object):
         return platform_id_list
 
 
+######################################harmonized lookups##################################
+
+    def lookup_sample_tag_content_harmonized(self, sample_id, tag):
+        """lookup content of a specific tag for a specific sample"""
+        print("\nLookup Result: ")
+        # note: ` ` around $t is escape character
+        results = []
+        try:
+            sql_query = 'SELECT inner_unnest.raw_data.`$t` FROM (SELECT * FROM `test-data` UNNEST MINiML.Sample AS custom_data WHERE custom_data.iid = $1) as outer_unnest UNNEST outer_unnest.custom_data.Channel.Characteristics as inner_unnest WHERE inner_unnest.raw_data.tag = $2'
+
+            row_iter = self.cluster.query(
+                sql_query, QueryOptions(positional_parameters=[sample_id, tag]))
+
+            for row in row_iter:
+                #print(row["$t"])
+                result = (row["$t"]) #only one result line, so it won't be overwritten
+
+            return result
+        except Exception as e:
+            print(e)
+
+    def lookup_exposure_start_harmonized(self, sample_id):
+        """lookup the exposure start for given sample_id"""
+        print("\nLookup Result: ")
+        # note: ` ` around $t is escape character
+        results = []
+        try:
+            sql_query = 'SELECT custom_data.Channel.`Treatment-Protocol`.raw_data.exposure_start.`$t` FROM (SELECT * FROM `test-data` UNNEST MINiML.Sample AS custom_data WHERE custom_data.iid = $1) as outer_unnest'
+
+            row_iter = self.cluster.query(
+                sql_query, QueryOptions(positional_parameters=[sample_id]))
+
+            for row in row_iter:
+                # print(row["$t"])
+                result = (row["$t"])  # only one result line, so it won't be overwritten
+
+            return result
+        except Exception as e:
+            print(e)
+
+    def lookup_exposure_duration_harmonized(self, sample_id):
+        """lookup the exposure start for given sample_id"""
+        print("\nLookup Result: ")
+        # note: ` ` around $t is escape character
+        results = []
+        try:
+            sql_query = 'SELECT custom_data.Channel.`Treatment-Protocol`.raw_data.exposure_duration.`$t` FROM (SELECT * FROM `test-data` UNNEST MINiML.Sample AS custom_data WHERE custom_data.iid = $1) as outer_unnest'
+
+            row_iter = self.cluster.query(
+                sql_query, QueryOptions(positional_parameters=[sample_id]))
+
+            for row in row_iter:
+                # print(row["$t"])
+                result = (row["$t"])  # only one result line, so it won't be overwritten
+
+            return result
+        except Exception as e:
+            print(e)
+
+
+    def lookup_sample_concentration_harmonized(self, sample_id):
+        """lookup content of a specific tag for a specific sample"""
+        print("\nLookup Result: ")
+        # note: ` ` around $t is escape character
+        results = []
+        try:
+            sql_query = 'SELECT inner_unnest.raw_data.concentration.`$t` FROM (SELECT * FROM `test-data` UNNEST MINiML.Sample AS custom_data WHERE custom_data.iid = $1) as outer_unnest UNNEST outer_unnest.custom_data.Channel.Characteristics as inner_unnest WHERE inner_unnest.raw_data.concentration.`$t` IS NOT NULL'
+
+            row_iter = self.cluster.query(
+                sql_query, QueryOptions(positional_parameters=[sample_id]))
+
+            for row in row_iter:
+                #print(row["$t"])
+                result = (row["$t"]) #only one result line, so it won't be overwritten
+
+            return result
+        except Exception as e:
+            print(e)
+
+
+    def lookup_sample_compound_harmonized(self, sample_id):
+        """lookup content of a specific tag for a specific sample"""
+        print("\nLookup Result: ")
+        # note: ` ` around $t is escape character
+        results = []
+        try:
+            sql_query = 'SELECT inner_unnest.raw_data.compound.`$t` FROM (SELECT * FROM `test-data` UNNEST MINiML.Sample AS custom_data WHERE custom_data.iid = $1) as outer_unnest UNNEST outer_unnest.custom_data.Channel.Characteristics as inner_unnest WHERE inner_unnest.raw_data.compound.`$t` IS NOT MISSING'
+
+            row_iter = self.cluster.query(
+                sql_query, QueryOptions(positional_parameters=[sample_id]))
+
+            for row in row_iter:
+                #print(row["$t"])
+                result = (row["$t"]) #only one result line, so it won't be overwritten
+
+            return result
+        except Exception as e:
+            print(e)
 
 def connection_test():
     couchbaseConnection = CouchbaseConnection('couchbase://localhost:8091', 'admin', 'testpw')
@@ -318,7 +416,7 @@ def connection_test():
     #couchbaseConnection.lookup_tag_and_content()
     #couchbaseConnection.lookup_sample_ids("GSE105766")
 
-    #couchbaseConnection.lookup_by_doc_id('GSE105766')
+    #couchbaseConnection.lookup_doc_by_id('GSE105766')
     #couchbaseConnection.lookup_characteristics('GSE105766')
     #couchbaseConnection.lookup_all_tags_and_content()
     #couchbaseConnection.lookup_sample_by_characteristic('strain', 'AB strain')
@@ -329,6 +427,6 @@ def connection_test():
     # couchbaseConnection.lookup_benchmark_content()
     # couchbaseConnection.lookup_sample_ids_benchmark()
     #couchbaseConnection.lookup_platform_ids_benchmark()
-    couchbaseConnection.lookup_sample_id_by_tag("treatment_raw")
+    #couchbaseConnection.lookup_sample_id_by_tag("treatment_raw")
     #print(test)
-connection_test()
+#connection_test()

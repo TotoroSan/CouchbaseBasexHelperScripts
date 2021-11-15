@@ -1,4 +1,9 @@
-import BaseXClient
+import os
+import time
+
+import XmlToCouchbase.BaseXClient as BaseXClient
+import XmlToCouchbase.couchbase_handler
+
 
 class BaseXConnection(object):
 
@@ -24,15 +29,16 @@ class BaseXConnection(object):
 
             query.bind("$id", id)
             # loop through all results
-            #for item in query.iter(): print("item=%s" % item)
+            for item in query.iter(): print(item)
 
             # close query object
             query.close()
 
         finally:
-            # close session
-            if self.session:
-                self.session.close()
+            pass
+        #     # close session
+        #     if self.session:
+        #         self.session.close()
 
     def lookup_doc_by_id_2(self):
         try:
@@ -54,8 +60,8 @@ class BaseXConnection(object):
             if self.session:
                 self.session.close()
 
-    def lookup_characteristic_by_id(self, id):
-        """Retrieve full document by Series ID"""
+    def lookup_characteristics(self, id):
+        """"lookup characteristics data of all samples for given series ID"""
         #11.6 MS as unoptimized query
         try:
             # create query instance
@@ -73,9 +79,10 @@ class BaseXConnection(object):
             query.close()
 
         finally:
-            # close session
-            if self.session:
-                self.session.close()
+            pass
+            # # close session
+            # if self.session:
+            #     self.session.close()
 
     def lookup_sample_tags(self, id):
         """lookup the characteristic tags for given sample ID"""
@@ -95,9 +102,10 @@ class BaseXConnection(object):
             query.close()
 
         finally:
-            # close session
-            if self.session:
-                self.session.close()
+            pass
+            # # close session
+            # if self.session:
+            #     self.session.close()
 
     def lookup_sample_id_by_tag(self, tag):
         """lookup ids of samples that have specified tag"""
@@ -117,9 +125,10 @@ class BaseXConnection(object):
             query.close()
 
         finally:
-            # close session
-            if self.session:
-                self.session.close()
+            pass
+            # # close session
+            # if self.session:
+            #     self.session.close()
 
     def lookup_series_by_platform_id(self, id):
         """lookup all series ids for documents that use the specified platform"""
@@ -139,9 +148,10 @@ class BaseXConnection(object):
             query.close()
 
         finally:
-            # close session
-            if self.session:
-                self.session.close()
+            pass
+            # # close session
+            # if self.session:
+            #     self.session.close()
 
     def lookup_sample_by_characteristic(self, tag, content):
         """lookup sample ids for which passed tag has passed content """
@@ -158,15 +168,16 @@ class BaseXConnection(object):
             query.bind("$content", content)
 
             # loop through all results
-            for item in query.iter(): print("item=%s" % item)
+            #for item in query.iter(): print("item=%s" % item)
 
             # close query object
             query.close()
 
         finally:
-            # close session
-            if self.session:
-                self.session.close()
+            pass
+            # # close session
+            # if self.session:
+            #     self.session.close()
 
 
 bc = BaseXConnection('localhost', 1984, 'admin', 'admin')

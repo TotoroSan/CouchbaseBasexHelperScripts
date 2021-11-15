@@ -1,6 +1,6 @@
 import os
 import pytest
-
+import XmlToCouchbase.BaseXClient as BaseXClient
 
 from XmlToCouchbase.couchbase_handler  import CouchbaseConnection
 from XmlToCouchbase.basex_handler import BaseXConnection
@@ -120,20 +120,20 @@ def doc_retrieval_by_id_bx(id):
 def test_doc_retrieval_by_id_bx(benchmark, id):
     benchmark.pedantic(doc_retrieval_by_id_bx, id, rounds=100, iterations=1)
 
-# retrieve all sample ids and charateristics for given series id | selection+projection of deep data
+#
 def lookup_characteristic_by_id_bx(id):
      bx.lookup_characteristics(id)
 @pytest.mark.parametrize('id', document_id_list, ids=filename_list)
-def test_characteristic_by_id_bx(benchmark, id):
+def test_lookup_characteristic_by_id_bx(benchmark, id):
     benchmark.pedantic(lookup_characteristic_by_id_bx, id, rounds=100, iterations=1)
 
 
 #
-def lookup_sample_by_charateristic_bx(tag, content):
+def lookup_sample_by_characteristic_bx(tag, content):
     bx.lookup_sample_by_characteristic(tag, content)
 @pytest.mark.parametrize("tag, content", tag_content_list, ids=numbers_list)
 def test_lookup_sample_by_characteristic_bx(benchmark, tag, content):
-    benchmark.pedantic(lookup_sample_by_charateristic_bx, (tag,content), rounds=100, iterations=1)
+    benchmark.pedantic(lookup_sample_by_characteristic_bx, (tag,content), rounds=100, iterations=1)
 
 # query attribute data
 def lookup_sample_tags_bx(id):
@@ -154,5 +154,5 @@ def test_lookup_sample_id_by_tag_bx(benchmark, tag):
 def lookup_series_by_platform_id_bx(id):
     bx.lookup_series_by_platform_id(id)
 @pytest.mark.parametrize('id', platform_id_list, ids=platform_id_names)
-def test_lookup_series_by_platform_bx(benchmark, id):
+def test_lookup_series_by_platform_id_bx(benchmark, id):
     benchmark.pedantic(lookup_series_by_platform_id_bx, id, rounds=100, iterations=1)
