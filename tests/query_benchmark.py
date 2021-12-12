@@ -4,7 +4,7 @@ import XmlToCouchbase.BaseXClient as BaseXClient
 
 from XmlToCouchbase.couchbase_handler  import CouchbaseConnection
 from XmlToCouchbase.basex_handler import BaseXConnection
-cb = CouchbaseConnection('couchbase://localhost:8091', 'admin', 'testpw')
+cb = CouchbaseConnection('couchbase://138.201.66.27:8091', 'admin', 'testpw')
 bx = BaseXConnection('localhost', 1984, 'admin', 'admin')
 
 
@@ -106,7 +106,7 @@ def test_lookup_sample_id_by_tag_cb(benchmark, tag):
 def lookup_series_by_platform_id_cb(id):
     cb.lookup_series_by_platform_id(id)
 @pytest.mark.parametrize('id', platform_id_list, ids=platform_id_names)
-def test_lookup_series_by_platform_id(benchmark, id):
+def test_lookup_series_by_platform_id_cb(benchmark, id):
     benchmark.pedantic(lookup_series_by_platform_id_cb, id, rounds=100, iterations=1)
 
 

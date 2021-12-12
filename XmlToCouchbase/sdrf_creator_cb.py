@@ -1,25 +1,25 @@
 from couchbase_handler import CouchbaseConnection
 
-
-
 def create_sdrf():
     # change dir
     cb = CouchbaseConnection('couchbase://localhost:8091', 'admin', 'testpw')
 
     title_list = ["embryo_age", "dechorinated", "exposure_start", "exposure_duration", "concentration", "tissue", "compound"]
     # tags have to be in the same order as corresponding titles
-    tag_list = ["age_raw"]#, "genotype_raw", "treatment_raw"]
+    tag_list = ["age_raw", "genotype_raw", "treatment_raw"]
 
     f = open("C:/Users/Gsell/PycharmProjects/XmlToCouchbase/test_file.txt", "w")
-    # write headers
+
 
     for title in title_list: f.write("\""+title+"\"" + " ")
 
-    # write id's of all samples of the document to sdrf file
+    # sample id list is nested list [["id1"], ["id2"]]
     sample_id_list = cb.lookup_sample_ids("GSE37019")
     print(sample_id_list)
     for id in sample_id_list:
+
         f.write("\n")
+        # write headers
         f.write("\"" + str(id[0]) + "\"")
 
         # write data for every tag specified in tag_list to sdrf file

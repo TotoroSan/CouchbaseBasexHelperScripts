@@ -39,7 +39,7 @@ def badgerfish_conversion(tree):
     Function that is benchmarked. Converts xml-Tree to JsonObject.
     """
     # # convert xml to json
-    badgerfish_converter = xmljson.BadgerFish(xml_schema="C:/Users/Gsell/PycharmProjects/xmljson/tests/MINiML.xsd") #ns_as_attrib=False, ns_as_prefix=True)
+    badgerfish_converter = xmljson.BadgerFish()#xml_schema="C:/Users/Gsell/PycharmProjects/xmljson/tests/MINiML.xsd") #ns_as_attrib=False, ns_as_prefix=True)
     jsonObj = badgerfish_converter.data(tree)
 
     #return dumps(jsonObj)
@@ -54,7 +54,7 @@ def test_conversion_badgerfish(benchmark, tree):
 
 
 def gdata_conversion(tree):
-    gdata_converter = xmljson.GData(xml_schema="C:/Users/Gsell/PycharmProjects/xmljson/tests/MINiML.xsd") #ns_as_attrib=False, ns_as_prefix=True)
+    gdata_converter = xmljson.GData()#xml_schema="C:/Users/Gsell/PycharmProjects/xmljson/tests/MINiML.xsd") #ns_as_attrib=False, ns_as_prefix=True)
     jsonObj = gdata_converter.data(tree)
 @pytest.mark.parametrize('tree', xml_tree_list, ids=xml_filename_list)
 def test_conversion_gdata(benchmark, tree):

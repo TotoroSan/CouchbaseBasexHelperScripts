@@ -29,7 +29,8 @@ class BaseXConnection(object):
 
             query.bind("$id", id)
             # loop through all results
-            for item in query.iter(): print(item)
+            for item in query.iter():
+                print("item=%s" % item)
 
             # close query object
             query.close()
@@ -86,7 +87,6 @@ class BaseXConnection(object):
 
     def lookup_sample_tags(self, id):
         """lookup the characteristic tags for given sample ID"""
-        # gibt derzeit tag + content aus - abändern wenn ich nur tag möchte
         try:
             # create query instance
             input = "declare variable $id external;db:attribute(\"danio_rerio_benchmark\", $id)" \
@@ -181,7 +181,10 @@ class BaseXConnection(object):
 
 
 bc = BaseXConnection('localhost', 1984, 'admin', 'admin')
-#bc.lookup_doc_by_id("GSE137770")
+
+
+
+
 #bc.lookup_doc_by_id()
 #bc.lookup_characteristic_by_id("GSE137770")
 #bc.lookup_sample_tags("GSM4087122")
