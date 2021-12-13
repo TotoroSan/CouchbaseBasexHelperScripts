@@ -4,7 +4,7 @@ import os
 
 import lxml.etree as ET
 
-directory_in_str = "C:/Users/Gsell/Documents/danio_rerio_benchmark"
+directory_in_str = ""
 
 
 with os.scandir(directory_in_str) as it:
@@ -17,7 +17,6 @@ with os.scandir(directory_in_str) as it:
             platform_count = 0
             #print("-------------------------------------------------")
             # parse xml file
-
             # print(entry.name + " " + str(my_schema.is_valid(entry.path)))
 
             tree = ET.parse(entry.path)

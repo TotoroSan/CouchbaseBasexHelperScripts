@@ -2,13 +2,13 @@ from couchbase_handler import CouchbaseConnection
 
 def create_sdrf():
     # change dir
-    cb = CouchbaseConnection('couchbase://localhost:8091', 'admin', 'testpw')
+    cb = CouchbaseConnection('couchbase://localhost:8091', 'admin', 'admin')
 
     title_list = ["embryo_age", "dechorinated", "exposure_start", "exposure_duration", "concentration", "tissue", "compound"]
     # tags have to be in the same order as corresponding titles
     tag_list = ["age_raw", "genotype_raw", "treatment_raw"]
 
-    f = open("C:/Users/Gsell/PycharmProjects/XmlToCouchbase/test_file.txt", "w")
+    f = open("test_file.txt", "w")
 
 
     for title in title_list: f.write("\""+title+"\"" + " ")
@@ -54,6 +54,6 @@ def create_sdrf():
 
 
     f.close()
-    #write age_raw
+
 
 create_sdrf()

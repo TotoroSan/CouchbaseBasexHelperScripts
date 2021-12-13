@@ -181,10 +181,6 @@ class BaseXConnection(object):
 
 
 bc = BaseXConnection('localhost', 1984, 'admin', 'admin')
-
-
-
-
 #bc.lookup_doc_by_id()
 #bc.lookup_characteristic_by_id("GSE137770")
 #bc.lookup_sample_tags("GSM4087122")

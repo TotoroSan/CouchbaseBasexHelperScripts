@@ -5,13 +5,13 @@ from json import dumps
 
 import pytest
 from lxml import etree as ET
-sys.path.insert(0,"C:/Users/Gsell/PycharmProjects/xmljson_fork")
+sys.path.insert(0,"reference path to xmljson_fork here")
 import xmljson # ist unterstrichen funzt aber trotzdem // package heißt trotzdem xml json auch wenn es eine fork ist
 
 # directory with input xml
-directory_in_str = "C:/Users/Gsell/Documents/danio_rerio_benchmark"
+directory_in_str = ""
 # output directory for json
-directory_out_str = "C:/Users/Gsell/Documents/danio_rerio_benchmark_json"
+directory_out_str = ""
 
 # contains root elements each in a list (because arguments need to be passed to benchmark as a list)
 xml_tree_list = []

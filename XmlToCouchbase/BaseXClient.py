@@ -22,6 +22,7 @@ Documentation: https://docs.basex.org/wiki/Clients
 import hashlib
 import socket
 
+
 # ---------------------------------
 #
 

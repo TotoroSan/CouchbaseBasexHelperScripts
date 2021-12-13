@@ -4,9 +4,9 @@ import os
 from couchbase_handler import CouchbaseConnection
 
 # directory with input xml
-directory_in_str = "C:/Users/Gsell/Documents/danio_rerio_benchmark_json"
+directory_in_str = ""
 # initialize couchbase connection
-cb = CouchbaseConnection('couchbase://138.201.66.27:8091', 'admin', 'testpw')
+cb = CouchbaseConnection('couchbase://localhost:8091', 'admin', 'admin')
 with os.scandir(directory_in_str) as it:
     for entry in it:
         if entry.name.endswith(".JSON") and entry.is_file():

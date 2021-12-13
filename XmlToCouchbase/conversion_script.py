@@ -9,23 +9,22 @@ from json import dumps
 
 from XmlToCouchbase.couchbase_handler import CouchbaseConnection
 
-sys.path.insert(0,"C:/Users/Gsell/PycharmProjects/xmljson_fork")
+sys.path.insert(0,"insert path to xmljson_fork here")
 import xmljson # package is stored locally and refers to xmljson_fork
 
 import xmlschema
 
-#todo directory als argument übergeben am besten, ggf. auch convention übergeben
-#oder config datei für die directories anlegen
+
 def xml_to_json():
     """convert XML from directory_in to JSON in directory_out """
     jsonStringList = []
 
-    my_schema = xmlschema.XMLSchema("C:/Users/Gsell/PycharmProjects/xmljson/tests/MINiML.xsd")
+    my_schema = xmlschema.XMLSchema("insert path to schema here")
 
     # directory with input xml
-    directory_in_str = "C:/Users/Gsell/Documents/danio_rerio_benchmark"
+    directory_in_str = ""
     # output directory for json
-    directory_out_str = "C:/Users/Gsell/Documents/danio_rerio_benchmark_json"
+    directory_out_str = ""
 
     parser = ET.XMLParser(remove_blank_text=True)
     with os.scandir(directory_in_str) as it:

@@ -22,8 +22,8 @@ class CouchbaseConnection(object):
         self.cluster = Cluster(self.server, ClusterOptions(
             PasswordAuthenticator(self.username, self.password)))
 
-        # connect to the server
-        self.connect('test-data')
+        # connect to the server -> enter bucket name here
+        self.connect('bucket')
 
     def connect(self, bucket):
         """Connect to Coucbase bucket. Multiple simultaneous connections are possible"""
@@ -38,8 +38,7 @@ class CouchbaseConnection(object):
     def upsert_document(self, doc, key):
         print("\nUpsert CAS: ")
         try:
-            # key will equal: "airline_8091"
-            #key = doc["type"] + "_" + str(doc["id"])
+
             result = self.cb_coll.upsert(key, doc)
             print(result.cas)
         except Exception as e:
@@ -51,7 +50,7 @@ class CouchbaseConnection(object):
         print("\nGet Result: ")
         try:
             result = self.cb_coll.get(key)
-          #  print(result.content_as[str])
+            print(result.content_as[str])
 
             print("Report execution time: {}".format(result.metadata().metrics().execution_time()))
         except Exception as e:
@@ -99,13 +98,10 @@ class CouchbaseConnection(object):
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[id], metrics=True))
 
-            print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
-            #for row in row_iter:
-                #print(row)
-                #sample_id_list.append([row["iid"]])
 
-            #print(sample_id_list)
-            #return sample_id_list
+            for row in row_iter: print(row)
+            print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
+
         except Exception as e:
             print(e)
 
@@ -117,13 +113,10 @@ class CouchbaseConnection(object):
                         'AS outer_unnest WHERE outer_unnest.custom_data.iid = $1'
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[sample_id], metrics=True))
-            #for row in row_iter: print(row)
+            for row in row_iter: print(row)
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
         except Exception as e:
             print(e)
-
-
-
 
 
     # part of benchmarking
@@ -135,7 +128,7 @@ class CouchbaseConnection(object):
 
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[id], metrics=True))
-            #for row in row_iter: print(row)
+            for row in row_iter: print(row)
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
         except Exception as e:
             print(e)
@@ -148,14 +141,12 @@ class CouchbaseConnection(object):
 
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[id], metrics=True))
-            #for row in row_iter: print(row)
+            for row in row_iter: print(row)
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
         except Exception as e:
             print(e)
 
 
-
-    #benchmark this
     def lookup_sample_by_characteristic(self, tag, content):
         """lookup sample ids for which passed tag has passed content """
 
@@ -169,7 +160,7 @@ class CouchbaseConnection(object):
 
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[tag, content]), metrics=True)
-            #for row in row_iter: print(row)
+            for row in row_iter: print(row)
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
         except Exception as e:
             print(e)
@@ -184,7 +175,7 @@ class CouchbaseConnection(object):
 
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[tag, content]), metrics=True)
-            #for row in row_iter: print(row)
+            for row in row_iter: print(row)
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
         except Exception as e:
             print(e)
@@ -227,11 +218,9 @@ class CouchbaseConnection(object):
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[sample_id, tag]), metrics=True)
 
-            #for row in row_iter:
-                #print(row["$t"])
-                #result = row["$t"] #only one result line, so it won't be overwritten
+            for row in row_iter: print(row["$t"])
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
-            #return result
+
         except Exception as e:
             print(e)
 
@@ -247,8 +236,7 @@ class CouchbaseConnection(object):
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[tag]), metrics=True)
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
-            # for row in row_iter:
-            #     print(row)
+            for row in row_iter: print(row)
 
         except Exception as e:
             print(e)
@@ -293,7 +281,7 @@ class CouchbaseConnection(object):
 
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[]), metrics=True)
-            #for row in row_iter: print(row)
+            for row in row_iter: print(row)
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
         except Exception as e:
             print(e)
@@ -305,102 +293,12 @@ class CouchbaseConnection(object):
             sql_query = 'SELECT META(`test-data`).id FROM `test-data` WHERE MINiML.Platform.iid = $1;'
             row_iter = self.cluster.query(
                 sql_query, QueryOptions(positional_parameters=[platform_id]), metrics=True)
-            #for row in row_iter: print(row)
+            for row in row_iter: print(row)
             print("Report execution time: {}".format(row_iter.metadata().metrics().execution_time()))
         except Exception as e:
             print(e)
 
-
-    ################ BENCHMARK HELPER FUNCTIONS ############################
-    def lookup_tags_benchmark(self):
-        """lookup tag and content for ALL samples of ALL series"""
-        tag_list = []
-        counter = 0
-        print("\nLookup Result: ")
-        try:
-            sql_query = 'SELECT inner_unnest.tag ' \
-                        'FROM (SELECT * FROM `test-data` UNNEST MINiML.Sample AS custom_data) as outer_unnest ' \
-                        'UNNEST outer_unnest.custom_data.Channel.Characteristics as inner_unnest'
-
-            row_iter = self.cluster.query(
-                sql_query, QueryOptions(positional_parameters=[]))
-            for row in row_iter:
-                if counter < 300:
-                    tag_list.append([row['tag']])
-                    counter += 1
-            print(tag_list)
-            return tag_list
-
-        except Exception as e:
-            print(e)
-
-    def lookup_content_benchmark(self):
-        """helper function for benchmark"""
-        content_list = []
-        counter = 0
-        print("\nLookup Result: ")
-        try:
-            sql_query = 'SELECT inner_unnest.`$t` ' \
-                        'FROM (SELECT * FROM `test-data` UNNEST MINiML.Sample AS custom_data) as outer_unnest ' \
-                        'UNNEST outer_unnest.custom_data.Channel.Characteristics as inner_unnest'
-
-            row_iter = self.cluster.query(
-                sql_query, QueryOptions(positional_parameters=[]))
-            for row in row_iter:
-                if counter < 300:
-                    content_list.append([row['$t']])
-                    counter += 1
-            print (content_list)
-            return content_list
-        except Exception as e:
-            print(e)
-
-
-    def lookup_sample_ids_benchmark(self):
-        """helper function for benchmar"""
-
-        #print("\nLookup Result: ")
-        sample_id_list = []
-        try:
-            sql_query = 'SELECT custom_data.iid FROM (SELECT * FROM `test-data` UNNEST MINiML.Sample AS custom_data) ' \
-                        'as outer_unnest'
-
-            row_iter = self.cluster.query(
-                sql_query, QueryOptions(positional_parameters=[]))
-            for row in row_iter:
-                #print(row)
-                if len(sample_id_list) < 300:
-                    sample_id_list.append([row["iid"]]) # todo remove, only temporary for benchmarking
-
-            #print(sample_id_list)
-            return sample_id_list
-        except Exception as e:
-            print(e)
-
-    def lookup_platform_ids_benchmark(self):
-        """helper function for benchmark"""
-
-        #print("\nLookup Result: ")
-        platform_id_list = []
-        while len(platform_id_list) < 300:
-            try:
-                sql_query = 'SELECT MINiML.Platform.iid FROM `test-data` WHERE MINiML.Platform.iid IS NOT NULL'
-
-                row_iter = self.cluster.query(
-                    sql_query, QueryOptions(positional_parameters=[]))
-                for row in row_iter:
-                    #print(row)
-                    if len(platform_id_list) < 300:
-                        platform_id_list.append([row["iid"]]) # todo remove, only temporary for benchmarking
-
-                #print(len(platform_id_list))
-
-            except Exception as e:
-                print(e)
-        return platform_id_list
-
-
-######################################harmonized lookups##################################
+    ##################### special query functions for harmonized content ###############################
 
     def lookup_sample_tag_content_harmonized(self, sample_id, tag):
         """lookup content of a specific tag for a specific sample"""
@@ -498,25 +396,23 @@ class CouchbaseConnection(object):
             print(e)
 
 def connection_test():
-    #pass
-    #couchbaseConnection = CouchbaseConnection('couchbase://localhost:8091', 'admin', 'testpw')
-    couchbaseConnection=  CouchbaseConnection('couchbase://138.201.66.27:8091', 'admin', 'testpw')
+    #example usage of lookup functions
+    couchbaseConnection = CouchbaseConnection('couchbase://localhost:8091', 'admin', 'admin')
 
 
     couchbaseConnection.lookup_doc_by_id("GSE164728")
 
-    #couchbaseConnection.lookup_characteristics("GSE152189")
-    #couchbaseConnection.lookup_characteristics_alternative("GSE150046")
+    couchbaseConnection.lookup_characteristics("GSE152189")
+    couchbaseConnection.lookup_characteristics_alternative("GSE150046")
 
-    #couchbaseConnection.lookup_sample_tags("GSM4568913")
-    # couchbaseConnection.lookup_sample_tags_alternative("GSM4568913")
+    couchbaseConnection.lookup_sample_tags("GSM4568913")
+    couchbaseConnection.lookup_sample_tags_alternative("GSM4568913")
 
+    couchbaseConnection.lookup_sample_id_by_tag("strain")
+    couchbaseConnection.lookup_sample_id_by_tag_alternative("strain")
+    couchbaseConnection.lookup_sample_id_by_tag_optimal("strain")
 
-    # couchbaseConnection.lookup_sample_id_by_tag("strain")
-    #couchbaseConnection.lookup_sample_id_by_tag_alternative("strain")
-    #couchbaseConnection.lookup_sample_id_by_tag_optimal("strain")
-
-    # couchbaseConnection.lookup_sample_by_characteristic_alternative("tissue", "zebrafish neuromast hair cells")
-    # couchbaseConnection.lookup_series_by_platform_id("GPL25922")
+    couchbaseConnection.lookup_sample_by_characteristic_alternative("tissue", "zebrafish neuromast hair cells")
+    couchbaseConnection.lookup_series_by_platform_id("GPL25922")
 
 connection_test()
