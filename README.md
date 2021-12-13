@@ -1,4 +1,4 @@
-# XmlToCouchbase
+# XmlToCouchbase - Helper Scripts
 basex_handler.py - contains xquery query templates for MINiML data in BaseX (uses BaseXClient.py) <br/>
 couchbase_handler - contains n1ql query templates for MINiML data in Couchbase <br/>
 sdrf_creator - example how to use query templates for sdrf creation <br/>
