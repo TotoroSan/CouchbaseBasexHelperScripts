@@ -2,7 +2,6 @@
 import json
 import sys
 import os
-import time
 from os import path
 import lxml.etree as ET
 from json import dumps

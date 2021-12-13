@@ -1,7 +1,7 @@
 import os
 import time
 
-import XmlToCouchbase.BaseXClient as BaseXClient
+import BaseXClient as BaseXClient
 import XmlToCouchbase.couchbase_handler
 
 
